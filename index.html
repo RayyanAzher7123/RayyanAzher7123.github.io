@@ -1,313 +1,574 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en" data-theme="dark">
 <head>
-    <link rel="stylesheet" href = "style.css">
-    <meta charset = "UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rayyan Azher's website</title>
+
+    <title>Rayyan Azher — Software Developer</title>
+    <meta name="description" content="Rayyan Azher is a Computer Science student at Dalhousie University and a software developer with two internships at Sobeys Headquarters, building full-stack, cloud and AI-powered applications.">
+    <meta name="author" content="Rayyan Azher">
+    <meta name="theme-color" content="#07070a">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rayyan Azher — Software Developer">
+    <meta property="og:description" content="Full-stack developer and Computer Science student building reliable software with .NET, React, SQL and Python.">
+    <meta property="og:image" content="images/grad_pic.jpg">
+
+    <link rel="icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/1cd08c634c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src = "images/logo.png" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#hobbies">Hobbies</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                    
+
+<div class="loader" id="loader">
+    <div class="loader-mark">RA</div>
+    <div class="loader-bar"><span></span></div>
+</div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ==================== NAVBAR ==================== -->
+<header class="nav" id="nav">
+    <div class="container nav-inner">
+        <a href="#home" class="brand">
+            <span class="brand-mark">RA</span>
+            <span class="brand-name">Rayyan<span class="dot">.</span></span>
+        </a>
+
+        <div class="nav-backdrop" id="navBackdrop"></div>
+
+        <nav class="nav-links" id="navLinks">
+            <button class="nav-close" id="navClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#journey" class="nav-link">Experience</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn" id="themeToggle" aria-label="Toggle colour theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <a href="images/Rayyan Azher Full Time Resume - Resmed (2).pdf" download class="btn btn-sm btn-primary nav-resume">
+                <i class="fa-solid fa-download"></i> Resume
+            </a>
+            <button class="icon-btn nav-burger" id="navBurger" aria-label="Open menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section id="home" class="hero">
+    <div class="hero-bg" aria-hidden="true">
+        <div class="grid-overlay"></div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container hero-inner">
+        <div class="hero-copy">
+            <span class="status-pill" data-reveal>
+                <span class="ping"></span> Available for full-time roles · May 2026
+            </span>
+
+            <h1 class="hero-title" data-reveal data-reveal-delay="60">
+                Hi, I'm <span class="grad-text">Rayyan Azher</span>
+            </h1>
+
+            <p class="hero-role" data-reveal data-reveal-delay="120">
+                <span class="mono">&lt;</span>
+                <span id="typed" class="typed"></span><span class="caret"></span>
+                <span class="mono">/&gt;</span>
+            </p>
+
+            <p class="hero-desc" data-reveal data-reveal-delay="180">
+                Computer Science student at Dalhousie University with two software development
+                internships at <strong>Sobeys Headquarters</strong>. I build full-stack applications,
+                automation tools and data-driven systems that solve real operational problems.
+            </p>
+
+            <div class="hero-cta" data-reveal data-reveal-delay="240">
+                <a href="#projects" class="btn btn-primary">
+                    View my work <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-ghost">
+                    <i class="fa-solid fa-paper-plane"></i> Get in touch
+                </a>
+            </div>
+
+            <div class="hero-social" data-reveal data-reveal-delay="300">
+                <a href="https://github.com/RayyanAzher7123" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rayyan-miswani-944590260/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/_bristol_boy/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:rayyanazher25@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="hero-visual" data-reveal data-reveal-delay="200">
+            <div class="portrait-card" id="portraitCard">
+                <div class="portrait-inner">
+                    <div class="portrait-glow"></div>
+                    <img src="images/grad_pic.jpg" alt="Rayyan Azher in graduation attire at Dalhousie University" class="portrait-img">
+                </div>
+                <span class="float-chip chip-1"><i class="fa-brands fa-react"></i> React</span>
+                <span class="float-chip chip-2"><i class="fa-solid fa-c"></i> .NET / C#</span>
+                <span class="float-chip chip-3"><i class="fa-solid fa-database"></i> SQL Server</span>
+                <span class="float-chip chip-4"><i class="fa-brands fa-python"></i> Python</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="stats" data-reveal>
+            <div class="stat">
+                <span class="stat-num" data-count="2">0</span>
+                <span class="stat-label">Software Dev Internships</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num" data-count="8" data-suffix="+">0</span>
+                <span class="stat-label">Programming Languages</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num" data-count="30" data-suffix="%">0</span>
+                <span class="stat-label">Manual Effort Automated</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num" data-count="20" data-suffix="+">0</span>
+                <span class="stat-label">Tools &amp; Frameworks Used</span>
+            </div>
+        </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to about">
+        <span class="mouse"><span></span></span>
+        Scroll
+    </a>
+</section>
+
+<!-- ==================== ABOUT ==================== -->
+<section id="about" class="section">
+    <div class="container">
+        <div class="section-head" data-reveal>
+            <span class="eyebrow">01 — About</span>
+            <h2 class="section-title">A developer who ships <span class="grad-text">real things</span></h2>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-media" data-reveal>
+                <div class="photo-frame">
+                    <img src="images/Rayyan_sobeys.jpg" alt="Rayyan Azher at Sobeys Headquarters">
+                </div>
+                <div class="badge-card">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <div>
+                        <strong>2 Summers</strong>
+                        <span>at Sobeys HQ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-body" data-reveal data-reveal-delay="120">
+                <p>
+                    I'm a passionate Computer Science student and aspiring software developer with hands-on
+                    experience building real-world applications across web, backend and automation technologies.
+                </p>
+                <p>
+                    Across two internships at Sobeys Headquarters I developed full-stack applications, created
+                    automation tools, improved existing enterprise systems and implemented secure authentication
+                    and data-driven features. Those summers sharpened my problem-solving, system integration and
+                    debugging skills, and taught me how to build software that holds up in production.
+                </p>
+                <p>
+                    My interests sit at the intersection of full-stack development, cloud technologies, databases
+                    and AI-powered applications. I'm always looking for meaningful challenges and new tools to grow with.
+                </p>
+
+                <ul class="fact-list">
+                    <li><i class="fa-solid fa-graduation-cap"></i> BCS @ Dalhousie University · Grad May 2026</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Halifax, Nova Scotia, Canada</li>
+                    <li><i class="fa-solid fa-code"></i> Full-stack · Cloud · Data · AI</li>
+                    <li><i class="fa-solid fa-bolt"></i> Agile / Scrum, code reviews, CI pipelines</li>
                 </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
 
-            </nav>
-            <div class="header-text">
-                <p>Computer Science Student | Full-Stack, Cloud & AI Explorer</p>
-                <h1>Hello, I'm <span>Rayyan</span><br> Azher</h1>
-            </div>
-
-        </div>
-
-    </div>
-   <!-----------------about--------------------- -->
-    <div id="about">
-        <div class="container"> 
-            <div class="row">
-                <div class="about-col-1">
-                    <img src= "images/Rayyan_sobeys.jpg" class="image1">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>
-                        Hi! I'm Rayyan Azher, a passionate Computer Science student and aspiring software developer with hands-on experience building real-world applications across web, backend, and automation technologies.
-                        <br><br>
-                        I’ve completed multiple software developer internships at Sobeys Headquarters, where I developed full-stack applications, created automation tools, improved existing enterprise systems, and implemented secure authentication and data-driven features. These experiences strengthened my skills in problem-solving, system integration, debugging, and building reliable software that meets real operational needs.
-                        <br><br>
-                        My interests include full-stack development, cloud technologies, databases, and AI-powered applications. I enjoy learning new tools, exploring emerging technologies, and working on projects that combine creativity with technical depth. I am always looking for opportunities to grow as a developer and take on meaningful challenges.
-                        <br><br>
-                        This website serves as a showcase of my work, my journey in tech, and the skills I continue to build. Thanks for visiting!
-                    </p>
-
-                        <div class="tab-titles">
-                          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                          <p class="tab-links" onclick="opentab('experience')">Work Experience</p>
-                          <p class="tab-links" onclick="opentab('education')">Education</p>
-                        </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li>
-                                    <span>Programming Languages:</span><br>
-                                    Experienced with <strong>Java, Python, C#, C++, C, JavaScript, PHP, Assembly</strong>, along with scripting in Node.js.
-                                </li>
-                                <li>
-                                    <span>Web & App Development:</span><br>
-                                    Skilled in building full-stack applications using <strong>ASP.NET Core, React, HTML, CSS, JavaScript</strong>, and server-side scripting with <strong>Node.js</strong>.
-                                </li>
-                                <li>
-                                    <span>Database & Backend:</span><br>
-                                    Strong knowledge of <strong>SQL Server, MySQL, MariaDB, PostgreSQL, MongoDB</strong> with experience in schema design, optimization, and secure data handling.
-                                </li>
-                                <li>
-                                    <span>Tools & Frameworks:</span><br>
-                                    Proficient with <strong>Git/GitHub, Azure DevOps, Docker, VS Code, Visual Studio, IntelliJ, PyCharm, Android Studio, SSMS, DBeaver, Unity</strong>.
-                                </li>
-                                <li>
-                                    <span>APIs & Libraries:</span><br>
-                                    Worked with <strong>React, Firebase, Pandas, NumPy, Matplotlib, Entity Framework Core, SQLAlchemy, Google Maps SDK, PayPal SDK, ZeroMQ, Flask</strong>.
-                                </li>
-                                <li>
-                                    <span>Soft Skills:</span><br>
-                                    Strong in <strong>teamwork, leadership, communication, problem-solving, time management, Agile/Scrum</strong>, and writing technical documentation.
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="tab-contents" id="experience">
-                            <ul>                                
-                                <li>
-                                    <span><h3>Junior Software Developer Intern</h3></span>
-                                    <p>Sobeys Headquarters — Stellarton, Nova Scotia</p>
-                                    <p><u>Duration:</u> May 2025 – August 2025</p>
-                                    <ul>
-                                        <li>• Developed internal tools including a registry-to-SQL automation app and a configuration-fetching system, reducing manual effort by 30%.</li>
-                                        <li>• Improved the Home Finance Tracker web app by implementing secure authentication, session-based login, bill-image viewing features, and enhanced dashboard UI.</li>
-                                        <li>• Collaborated on the Barcode Project, streamlining deployment pipelines and reducing resolution time for barcode-related tickets by 20%.</li>
-                                        <li>• Participated in Agile sprints, code reviews, and cross-team collaboration, contributing to a 10% improvement in team delivery efficiency.</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <span><h3>Software Developer Intern</h3></span>
-                                    <p>Sobeys Headquarters — Stellarton, Nova Scotia</p>
-                                    <p><u>Duration:</u> May 2024 – August 2024</p>
-                                    <ul>
-                                        <li>• Built a national store-information database and an internal application used by multiple clients for accessing store details.</li>
-                                        <li>• Completed numerous IT service tickets, including deployments, server access, debugging, and folder routing — improving response efficiency by 13%.</li>
-                                        <li>• Implemented data validation and security measures to ensure compliance with enterprise-level standards.</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li>
-                                    <span><h3>Indian High School</h3></span>
-                                    <p>Dubai,UAE</p>
-                                    <p>Graduated in June 2022</p>
-                                    
-                                </li>
-                                <li>
-                                    <span><h3>Dalhousie University</h3></span>
-                                    <p>Halifax,NS,Canada</p>
-                                    <p>Bachelor of Computer Science: Sep 2022 - Present</p>
-                                    <p>Expected Graduation: May 2026</p>
-
-                                    
-                                </li>
-                            </ul>
-                        </div>
-                </div>
+                <a href="#journey" class="btn btn-ghost btn-sm">
+                    See my experience <i class="fa-solid fa-arrow-down"></i>
+                </a>
             </div>
         </div>
     </div>
-    <!-- -----------------------------projects-------------------------- -->
-    <div id="projects">
-        <div class="container">
-            <h1 class="sub-title">My Projects</h1>
-            <div class="projects-list">
+</section>
 
-    <!-- Home Finance Tracker -->
-    <div>
-        <i class="fa-solid fa-chart-line"></i>
-        <h2>Home Finance Tracker</h2>
-        <p>
-            A full-stack personal finance management web application built with 
-            <strong>ASP.NET Core, C#, SQL Server, JavaScript</strong>, and responsive UI components. 
-            Features include secure authentication, session-based login, personalized expense tracking, 
-            interactive charts (bar, line, pie), and a dedicated panel for storing and viewing bill images.
-            Recently added an AI-powered chatbot to help users understand their financial data.
-        </p>
-        <a href="https://github.com/RayyanAzher7123/HomeFinanceTracker" target="_blank">Learn more</a>
+<!-- ==================== SKILLS ==================== -->
+<section id="skills" class="section section-alt">
+    <div class="container">
+        <div class="section-head" data-reveal>
+            <span class="eyebrow">02 — Skills</span>
+            <h2 class="section-title">The <span class="grad-text">toolkit</span> I build with</h2>
+            <p class="section-sub">Languages, frameworks and platforms I've used in internships, coursework and personal projects.</p>
+        </div>
+
+        <div class="skill-grid">
+            <article class="skill-card" data-reveal>
+                <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+                <h3>Programming Languages</h3>
+                <p>Core languages I write day to day, from low-level to scripting.</p>
+                <div class="chips">
+                    <span>Java</span><span>Python</span><span>C#</span><span>C++</span>
+                    <span>C</span><span>JavaScript</span><span>PHP</span><span>Assembly</span>
+                </div>
+            </article>
+
+            <article class="skill-card" data-reveal data-reveal-delay="80">
+                <div class="skill-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <h3>Web &amp; App Development</h3>
+                <p>Building responsive front-ends and reliable server-side logic.</p>
+                <div class="chips">
+                    <span>ASP.NET Core</span><span>React</span><span>Node.js</span>
+                    <span>HTML5</span><span>CSS3</span><span>Flask</span>
+                </div>
+            </article>
+
+            <article class="skill-card" data-reveal data-reveal-delay="160">
+                <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+                <h3>Databases &amp; Backend</h3>
+                <p>Schema design, query optimisation and secure data handling.</p>
+                <div class="chips">
+                    <span>SQL Server</span><span>MySQL</span><span>MariaDB</span>
+                    <span>PostgreSQL</span><span>MongoDB</span><span>EF Core</span><span>SQLAlchemy</span>
+                </div>
+            </article>
+
+            <article class="skill-card" data-reveal data-reveal-delay="240">
+                <div class="skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <h3>Tools &amp; Platforms</h3>
+                <p>The environment around the code: version control, CI and deployment.</p>
+                <div class="chips">
+                    <span>Git &amp; GitHub</span><span>Azure DevOps</span><span>Docker</span>
+                    <span>Visual Studio</span><span>VS Code</span><span>IntelliJ</span>
+                    <span>SSMS</span><span>DBeaver</span><span>Unity</span>
+                </div>
+            </article>
+
+            <article class="skill-card" data-reveal data-reveal-delay="320">
+                <div class="skill-icon"><i class="fa-solid fa-plug"></i></div>
+                <h3>APIs &amp; Libraries</h3>
+                <p>Integrations and data tooling used across projects.</p>
+                <div class="chips">
+                    <span>Firebase</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span>
+                    <span>Google Maps SDK</span><span>PayPal SDK</span><span>ZeroMQ</span>
+                </div>
+            </article>
+
+            <article class="skill-card" data-reveal data-reveal-delay="400">
+                <div class="skill-icon"><i class="fa-solid fa-people-group"></i></div>
+                <h3>Ways of Working</h3>
+                <p>How I operate inside a team and deliver consistently.</p>
+                <div class="chips">
+                    <span>Agile / Scrum</span><span>Code Reviews</span><span>Leadership</span>
+                    <span>Communication</span><span>Technical Writing</span><span>Time Management</span>
+                </div>
+            </article>
+        </div>
     </div>
+</section>
 
-    <!-- Powerless Game Project -->
-    <div>
-        <i class="fa-solid fa-gamepad"></i>
-        <h2>Powerless — 3D Horror Game</h2>
-        <p><em><strong>Status: In Progress</strong></em></p>
-        <p>
-            A first-person horror game developed in <strong>Unity</strong>, centered in an abandoned retail store 
-            where mannequins come to life. Designed core mechanics such as flashlight systems, battery pickups, 
-            collectible keys, character movement, jump-scare triggers, and environment interactions.  
-            Created multiple low-poly models (flashlight, batteries, keys) and collaborated with a team 
-            to develop the game loop, level design, and atmospheric storytelling.
-        </p>
-        <p style="font-size:12px; color:#ff004f;"><em>Repository: Private</em></p>
-    </div>
+<!-- ==================== EXPERIENCE & EDUCATION ==================== -->
+<section id="journey" class="section">
+    <div class="container">
+        <div class="section-head" data-reveal>
+            <span class="eyebrow">03 — Journey</span>
+            <h2 class="section-title">Experience &amp; <span class="grad-text">education</span></h2>
+            <p class="section-sub">Where I've worked, what I shipped, and where I've been learning.</p>
+        </div>
 
-    <!-- Registry to SQL Automation App -->
-    <div>
-        <i class="fa-solid fa-database"></i>
-        <h2>Registry-to-SQL Automation Tool</h2>
-        <p>
-            An internal automation utility developed during my Sobeys internship to extract configuration data 
-            from the Windows Registry and insert it into the <strong>ApplicationConfigurationValues</strong> table 
-            within SQL Server. Significantly reduced manual configuration time by automating data retrieval, 
-            transformation, and insertion. This tool now supports cleaner deployments and minimizes configuration errors.
-        </p>
-        <a href="https://github.com/RayyanAzher7123/RegistryToSQLApp" target="_blank">Learn more</a>
-    </div>
-
-</div>
-
-
-</div>
-</div>
-    <!-- ---------------- ----hobbies-------------------------------------- -->
-    <div id="hobbies">
-        <div class="container">
-            <h1 class="sub-title">My Hobbies</h1>
-            <div class="hobbies-list">
-                <div class="hobby">
-                    <img src="images/hobby1.png">
-                    <div class="layer">
-                        <a href="#hobbies"><i class="fa-solid fa-gear"></i></a>
-                        <h3>Adventure Crafting</h3>
-                        <p>I love creating day to day items using basic materials and applying different concepts I have learnt throughout my life.
-                            I've brought garbage bags to life as parachutes, transformed cloth pins into catapults for exciting launches
-                             and conceptualized a visionary three-wheeled electric car etc.
-                        </p>
+        <div class="timeline">
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-card">
+                    <div class="timeline-top">
+                        <span class="tag tag-work">Work</span>
+                        <span class="timeline-date">May 2025 — Aug 2025</span>
                     </div>
+                    <h3>Junior Software Developer Intern</h3>
+                    <p class="timeline-org"><i class="fa-solid fa-building"></i> Sobeys Headquarters · Stellarton, NS</p>
+                    <ul>
+                        <li>Developed internal tools including a registry-to-SQL automation app and a configuration-fetching system, reducing manual effort by <strong>30%</strong>.</li>
+                        <li>Improved the Home Finance Tracker web app with secure authentication, session-based login, bill-image viewing and a redesigned dashboard UI.</li>
+                        <li>Collaborated on the Barcode Project, streamlining deployment pipelines and cutting barcode ticket resolution time by <strong>20%</strong>.</li>
+                        <li>Participated in Agile sprints, code reviews and cross-team collaboration, contributing to a <strong>10%</strong> lift in team delivery efficiency.</li>
+                    </ul>
                 </div>
-                <div class="hobby">
-                    <img src="images/hobby2.jpg">
-                    <div class="layer">
-                    <a href="#hobbies"><i class="fa-solid fa-futbol"></i></a>
-                    <h3>Football</h3>
-                    <p>
-                        From school teams to leading my own team, football has been a constant thread in my life as I enjoy every moment on the pitch, guiding my team & pushing forward to win every challenge put through.
-                    </p>
-                </div>
-                </div>
-                <div class="hobby">
-                    <img src="images/hobby3.jpg">
-                    <div class="layer">
-                        <a href="#hobbies"><i class="fa-solid fa-golf-ball-tee"></i></a>
-                        <h3>Outing</h3>
-                        <p>
-                            I also love to spend my time outside whether be it playing golf,bowling,going to the arcade or the theatres.I love to spend time outside with the closest of my friends as it creates core and unforgettable memories.
-                        </p>
-                    </div>
+            </div>
 
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-card">
+                    <div class="timeline-top">
+                        <span class="tag tag-work">Work</span>
+                        <span class="timeline-date">May 2024 — Aug 2024</span>
+                    </div>
+                    <h3>Software Developer Intern</h3>
+                    <p class="timeline-org"><i class="fa-solid fa-building"></i> Sobeys Headquarters · Stellarton, NS</p>
+                    <ul>
+                        <li>Built a national store-information database and an internal application used by multiple clients to access store details.</li>
+                        <li>Closed a high volume of IT service tickets — deployments, server access, debugging and folder routing — improving response efficiency by <strong>13%</strong>.</li>
+                        <li>Implemented data validation and security measures to meet enterprise compliance standards.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-card">
+                    <div class="timeline-top">
+                        <span class="tag tag-edu">Education</span>
+                        <span class="timeline-date">Sep 2022 — May 2026</span>
+                    </div>
+                    <h3>Bachelor of Computer Science</h3>
+                    <p class="timeline-org"><i class="fa-solid fa-graduation-cap"></i> Dalhousie University · Halifax, NS</p>
+                    <ul>
+                        <li>Coursework across software engineering, data structures, databases, operating systems, networks and machine learning.</li>
+                        <li>Expected graduation: <strong>May 2026</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-reveal>
+                <span class="timeline-dot"></span>
+                <div class="timeline-card">
+                    <div class="timeline-top">
+                        <span class="tag tag-edu">Education</span>
+                        <span class="timeline-date">Graduated Jun 2022</span>
+                    </div>
+                    <h3>High School Diploma</h3>
+                    <p class="timeline-org"><i class="fa-solid fa-school"></i> The Indian High School · Dubai, UAE</p>
+                    <ul>
+                        <li>Focused on computer science, mathematics and physics.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!-- ------------------------contact----------------- -->
-        <div id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-envelope"></i> rayyanazher25@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i> 902-448-7782</p>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/_bristol_boy/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-                        <a href="https://twitter.com/Bristol_boy_69" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/in/rayyan-miswani-944590260/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                    <a href="images/Rayyan Azher Full Time Resume.pdf" download class="btn btn2" class>Download Resume</a>
-                </div>
-               
+    </div>
+</section>
 
-                    <div class="contact-right">
-                        <form name="submit-to-google-sheet">
-                            <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="text" name="Email" placeholder="Your Email" required>
-                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                            <button type="submit" class="btn btn2">Submit</button>
-                        </form>
-                        <span id="msg"></span>
+<!-- ==================== PROJECTS ==================== -->
+<section id="projects" class="section section-alt">
+    <div class="container">
+        <div class="section-head" data-reveal>
+            <span class="eyebrow">04 — Projects</span>
+            <h2 class="section-title">Things I've <span class="grad-text">built</span></h2>
+            <p class="section-sub">A selection of full-stack, cloud, AI and game development work.</p>
+        </div>
+
+        <div class="project-grid">
+            <article class="project-card featured" data-reveal data-tilt>
+                <div class="project-top">
+                    <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <span class="tag tag-live">Full-stack</span>
+                </div>
+                <h3>Home Finance Tracker</h3>
+                <p>
+                    A full-stack finance management application with authentication and session management,
+                    RESTful APIs for financial transactions, scalable database structures, secure file uploads
+                    for bill images, and interactive dashboards with charts. Built and iterated with testing,
+                    debugging and feature improvements for maintainability.
+                </p>
+                <div class="chips">
+                    <span>ASP.NET Core</span><span>C#</span><span>SQL Server</span>
+                    <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                </div>
+                <a href="https://github.com/RayyanAzher7123/HomeFinanceTracker" target="_blank" rel="noopener" class="project-link">
+                    View repository <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </article>
+
+            <article class="project-card" data-reveal data-reveal-delay="80" data-tilt>
+                <div class="project-top">
+                    <div class="project-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <span class="tag tag-live">AI / Backend</span>
+                </div>
+                <h3>Medibot</h3>
+                <p>
+                    A real-time medical prioritization system built for a GenAI hackathon. Backend services
+                    handle live data streams with asynchronous communication, SQLAlchemy ORM for database
+                    operations, validation logic, and structured data-processing workflows to support
+                    emergency-room queue conflict resolution.
+                </p>
+                <div class="chips">
+                    <span>Python</span><span>Flask</span><span>SQLAlchemy</span>
+                    <span>JSON</span><span>Pandas</span><span>ZeroMQ</span><span>Ollama</span>
+                </div>
+                <a href="https://github.com/naman108/gen-ai-hackathon" target="_blank" rel="noopener" class="project-link">
+                    View repository <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </article>
+
+            <article class="project-card" data-reveal data-reveal-delay="160" data-tilt>
+                <div class="project-top">
+                    <div class="project-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+                    <span class="tag tag-live">Cloud</span>
+                </div>
+                <h3>Weather Dashboard Web Application</h3>
+                <p>
+                    A cloud-based weather application that pulls real-time data from multiple APIs.
+                    Deployed on AWS with EC2, S3, RDS and VPC for hosting and networking, with backend
+                    data-processing workflows and a dynamic frontend that updates as conditions change.
+                </p>
+                <div class="chips">
+                    <span>AWS</span><span>EC2</span><span>S3</span><span>RDS</span>
+                    <span>VPC</span><span>REST APIs</span><span>JavaScript</span>
+                </div>
+                <span class="project-link muted-link">
+                    <i class="fa-solid fa-circle-info"></i> No public repository
+                </span>
+            </article>
+
+            <article class="project-card" data-reveal data-reveal-delay="100" data-tilt>
+                <div class="project-top">
+                    <div class="project-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <span class="tag tag-live">Game Dev</span>
+                </div>
+                <h3>Powerless — 3D Horror Game</h3>
+                <p>
+                    A completed first-person horror game (CSCI 4168 group project) set in an abandoned retail
+                    store where mannequins come to life. Designed core mechanics — flashlight and battery
+                    systems, collectible keys, movement, jump-scare triggers — and modelled low-poly assets
+                    while collaborating on level design and atmospheric storytelling.
+                </p>
+                <div class="chips">
+                    <span>Unity</span><span>C#</span><span>3D Modelling</span><span>Game Design</span>
+                </div>
+                <a href="https://github.com/RayyanAzher7123/CSCI4168-Powerless" target="_blank" rel="noopener" class="project-link">
+                    View repository <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </article>
+
+            <article class="project-card" data-reveal data-reveal-delay="200" data-tilt>
+                <div class="project-top">
+                    <div class="project-icon"><i class="fa-solid fa-database"></i></div>
+                    <span class="tag tag-live">Automation</span>
+                </div>
+                <h3>Registry-to-SQL Automation Tool</h3>
+                <p>
+                    An internal utility built during my Sobeys internship that extracts configuration data from
+                    the Windows Registry and writes it into SQL Server. It automates retrieval, transformation
+                    and insertion — cutting configuration time and reducing deployment errors.
+                </p>
+                <div class="chips">
+                    <span>C#</span><span>.NET</span><span>SQL Server</span><span>Windows Registry</span>
+                </div>
+                <a href="https://github.com/RayyanAzher7123/RegistryToSQLApp" target="_blank" rel="noopener" class="project-link">
+                    View repository <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </article>
+        </div>
+
+        <div class="projects-more" data-reveal>
+            <a href="https://github.com/RayyanAzher7123" target="_blank" rel="noopener" class="btn btn-ghost">
+                <i class="fa-brands fa-github"></i> More on GitHub
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section id="contact" class="section">
+    <div class="container">
+        <div class="section-head" data-reveal>
+            <span class="eyebrow">05 — Contact</span>
+            <h2 class="section-title">Let's build something <span class="grad-text">together</span></h2>
+            <p class="section-sub">Open to full-time software developer roles starting May 2026, and always happy to talk tech.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info" data-reveal>
+                <a class="contact-card" href="mailto:rayyanazher25@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <span>Email</span>
+                        <strong>rayyanazher25@gmail.com</strong>
+                    </div>
+                </a>
+                <a class="contact-card" href="tel:+19024487782">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <span>Phone</span>
+                        <strong>902-448-7782</strong>
+                    </div>
+                </a>
+                <div class="contact-card static">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <span>Location</span>
+                        <strong>Halifax, Nova Scotia</strong>
                     </div>
                 </div>
+
+                <div class="contact-socials">
+                    <a href="https://github.com/RayyanAzher7123" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/rayyan-miswani-944590260/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/_bristol_boy/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <a href="images/Rayyan Azher Full Time Resume - Resmed (2).pdf" download class="btn btn-primary btn-block">
+                    <i class="fa-solid fa-download"></i> Download resume
+                </a>
+            </div>
+
+            <div class="contact-form-wrap" data-reveal data-reveal-delay="120">
+                <form name="submit-to-google-sheet" id="contactForm" novalidate>
+                    <div class="field">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="Name" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Your email</label>
+                        <input type="email" id="email" name="Email" placeholder="jane@company.com" required>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="Message" rows="6" placeholder="Tell me about the role or idea..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                        <span class="btn-label">Send message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <p id="msg" class="form-msg"></p>
+                </form>
             </div>
         </div>
-        <div class="copyright">
-            <p>Copyright &copy;Rayyan.Made with <i class="fa-solid fa-heart"></i> by using W3S Schools </p>
-        </div>
-
     </div>
-    
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+</section>
 
-        function opentab(tabname){
-            for (tablink of tablinks){
-                tablink.classList.remove("active-link");
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+    <div class="container footer-inner">
+        <a href="#home" class="brand">
+            <span class="brand-mark">RA</span>
+            <span class="brand-name">Rayyan<span class="dot">.</span></span>
+        </a>
+        <nav class="footer-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#journey">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <p class="footer-note">© <span id="year"></span> Rayyan Azher · Designed &amp; built from scratch</p>
+    </div>
+</footer>
 
-            }
-            for (tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-                
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
+<button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-    <script>
-        var sidemenu= document.getElementById("sidemenu");
-
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-    </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxQ77n4KIWtBPlQawIDXXXjUYAXOyf758m6m6QOmZC8r55EfWSR1z3PPC04bhTUZZ9V/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully!"
-                setTimeout(function(){
-                    msg.innerHTML=""
-                },5000)
-                form.reset()
-
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
-
+<script src="script.js"></script>
 </body>
- 
 </html>
